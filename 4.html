@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">      
+    <style>
+    .orange {background-color: orange;}    
+    </style>
+    <div id = "box"></div>
+    <script>
+        window.onload = function() {   
+        	var box = document.getElementById('box');
+        	box.innerHTML = "<button>Add List</button><br><ul></ul>";
+            var btn = document.querySelector('button');
+            var ul = document.querySelector('ul');
+            var li = document.getElementsByTagName('li');            
+            
+            btn.addEventListener('click', function() {
+                var text = prompt("새로운 내용을 입력하세요");
+                ul.innerHTML += '<li>'+text+'</li>';
+                for (let i = 0; i < li.length; i++) {
+                    li[i].addEventListener('click', change)
+                }
+            });
+
+            for (let i = 0; i < li.length; i++) {
+                li[i].addEventListener('click', change)
+            }
+
+            function change(){
+                for (let i = 0; i < li.length; i++){
+                    li[i].removeAttribute('class')
+                }
+                this.setAttribute('class', 'orange')
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

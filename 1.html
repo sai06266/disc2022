@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script>
+	    window.onload = function () {
+	      	var low = 2
+	      	var high = 3
+	     	var mid = (low + high) / 2
+	      	var count = 0
+	      	while (true) {
+		      	var tmp = mid*mid*mid
+	        	if (Math.abs(tmp - 10) <= 0.00000001) {
+	        		break
+		        }
+		        if (tmp < 10) {
+		          low = mid
+	    	      mid = (low + high) / 2
+	        	} else if (tmp > 10) {
+	        	  high = mid
+	        	  mid = (low + high) / 2
+	        	}
+	        	count += 1
+	      	}
+	    	document.querySelector('h1').innerHTML = "횟수: " + count + " 결과: " + mid;
+	    }
+	</script>
+</head>
+<body>
+	<h1>입력</h1>
+</body>
+</html>
