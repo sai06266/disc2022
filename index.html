@@ -1,14 +1,109 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome to 송도</title>
+	<!--글씨체-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<!--문서 전체 적용 스타일-->
+	<style>
+		body{
+			background-image: url("https://vrthumb.clipartkorea.co.kr/2020/09/08/tc00230003248.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		*{
+			font-family: 'Jua', sans-serif;
+
+		}
+	</style>
+	<!--메인화면 div 스타일-->
+	<style>
+		.main{
+			margin-top:9%;
+
+		}
+		.title{
+			width: 1000px;
+			text-align: center;
+			margin:0 auto;
+			font-size: 70px;
+		}
+		.content{
+			width: 60%;
+			display:flex; 
+			justify-content:space-between; 
+			margin:0 auto;
+		}
+		.content a{
+			width: 250px;
+			height: 350px;
+			margin-left: 1%;
+			margin-right: 1%;
+			margin-top: 7%;
+			margin-bottom: 7%;
+			text-align: center;
+			border-radius: 10px;
+			background-color: white;
+			box-shadow: 3px 3px 3px 3px gray;
+			text-decoration: none;
+			color: black;
+			font-size: 40px;
+			background-color: #CCE5FF;
+		}
+		.content a:hover {
+			transform:translateY(-10px);
+		}
+		.content a div{
+			position: relative;
+			top:80px;
+		}
+	</style>
 </head>
 <body>
-  <h1>우리동네 소개: 송도</h1>
-  <a href= "Pi.html">송도 소개</a><br>
-  <a href= "numguess4.html">볼거리</a><br>
-  <a href= "myproject.html">맛집</a><br>
-  <a href= "midterm_exam.html">추천 여행 </a><br>
+	<header>
+	<div style="text-align: right; color:white; margin-top: 10px; font-size: 20px;">동적웹프로그래밍-컴퓨터공학과 정재민</div>
+	</header>
+	<div class="main">
+		<div class="title">
+			<i>Welcome to 송도</i>
+		</div>
 
-</body>
+		<div class="content">
+			<a href="project/history.html">
+				<div>
+					<img src="https://media.istockphoto.com/vectors/open-book-with-history-doodles-and-lettering-vector-id1092170968" width="195px;">
+				</div>
+				<div class="a">
+					송도 소개
+				</div>
+			</a>
+			<a href="project/play.html">
+				<div>
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVbqPwhcq8zaMYsV08gEZvKRNWmECX-7mufLEq6MjwxYl9q1kc" width="150px">
+				</div>
+				<div class="b">
+					볼거리
+				</div>
+			</a>
+			<a href="project/food.html">
+				<div>
+					<img src="http://www.urbanbrush.net/web/wp-content/uploads/edd/2018/08/urbanbrush-20180822024847414051.png" width="175px;" height="145px;">
+				</div>
+				<div class="c">
+					맛집
+				</div>
+			</a>
+			<a href="project/travel.html">
+				<div>
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIJ94_h-VWt_d6XYTHDYEIeF8D6xFJW4SVcg&usqp=CAU" width="185px;">
+				</div>
+				<div class="d">
+					추천 여행 경로
+				</div>
+			</a>
+		</div>
+	</div>
+	</body>
 </html>
