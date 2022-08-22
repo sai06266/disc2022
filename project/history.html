@@ -39,6 +39,46 @@
 			border-bottom: 1px solid black;
 		}
 	</style>
+	<style>
+		.column {
+		  float: left;
+		  width: 23%;
+		  padding: 10px;
+		  font-size: 25px;
+		}
+		.column img {
+		  opacity: 0.8; 
+		  cursor: pointer; 
+		  height: 156px;
+		}
+		.column img:hover {
+		  opacity: 1;
+		}
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		.container {
+		  position: relative;
+		  display: none;
+		}
+		#imgtext {
+		  position: absolute;
+		  bottom: 15px;
+		  left: 15px;
+		  color: white;
+		  font-size: 20px;
+		}
+		.closebtn {
+		  position: absolute;
+		  top: 10px;
+		  right: 15px;
+		  color: white;
+		  font-size: 35px;
+		  cursor: pointer;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -124,8 +164,38 @@
 
 		<div>
 			<div style="font-size: 40px;"><i><송도의 변천사></i></div>
-			<img src="year2.jpg" style="width: 1100px;">
-		</div>
+			<div class="row">
+			  <div class="column">
+			  	1994년
+			    <img src="1994.jpg" style="width:100%" onclick="myFunction(this);">
+			  </div>
+			  <div class="column">
+			  	2001년
+			    <img src="2001.jpg" style="width:100%" onclick="myFunction(this);">
+			  </div>
+			  <div class="column">
+			  	2009년
+			    <img src="2009.jpg" style="width:100%" onclick="myFunction(this);">
+			  </div>
+			  <div class="column">
+			  	2020년
+			    <img src="2020.jpg" style="width:100%" onclick="myFunction(this);">
+			  </div>
+			</div>
+			<div class="container">
+			  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+			  <img id="expandedImg" style="width:100%">
+			  <div id="imgtext"></div>
+			</div>
+			<script>
+			function myFunction(imgs) {
+			  var expandImg = document.getElementById("expandedImg");
+			  var imgText = document.getElementById("imgtext");
+			  expandImg.src = imgs.src;
+			  imgText.innerHTML = imgs.alt;
+			  expandImg.parentElement.style.display = "block";
+			}
+			</script>
 	</section>
 
 	<footer>
