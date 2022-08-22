@@ -8,7 +8,6 @@
 	<style>
 		body{
 			background-color: #f1f7ff;
-
 		}
 		header{
 			display: flex;
@@ -17,16 +16,129 @@
 		}
 		*{
 			font-family: 'Jua', sans-serif;
-
 		}
 	</style>
+  	<style>
+	    .c1, .c2{
+	      background-color: #777;
+	      color: white;
+	      cursor: pointer;
+	      padding: 18px;
+	      width: 50%;
+	      border: none;
+	      outline: none;
+	      font-size: 30px;
+	    }
+	    .c1:hover, .c2:hover {
+	      background-color: #555;
+	    }
+	    div{
+	      margin: 0 auto;
+	      font-size: 25px;
+	      height: 60px;
+	      line-height: 60px;
+	    }
+	    .content, .content2{
+	      width: 50%;
+	      display: none;
+	      overflow: hidden;
+	      background-color: #f1f1f1;
+	    }
+	    section{
+	      text-align: center;
+	    }
+  	</style>
 </head>
 <body>
 	<header>
 		<a style="margin-left: 10px;">추천 여행 경로</a>
 		<a href = "https://sai06266.github.io/disc2022/"><img src="https://cdn.icon-icons.com/icons2/1462/PNG/512/086home_99873.png" width="50px;" style="margin: 5px 5px 0 0"></a>
 	</header>	
-	<hr>
+	<hr>		
+	<div style="font-size: 35px; text-align: center">
+		<여행 코스 A>
+	</div>
+  	<section>
+	    <button type="button" class="c1">점심식사</button>
+	    <div class="content">
+	      <div>엉클 인 더 키친에서 쌀국수</div>
+	    </div>
+	    <button type="button" class="c1">센트럴파크</button>
+	    <div class="content">
+	      <div>센트럴파크 ,한옥마을 구경 + 보트 체험</div>
+	    </div>
+	    <button type="button" class="c1">G타워 하늘전망대</button>
+	    <div class="content">
+	      <div>33층 IFEZ홍보관 + 29층 전망대 구경</div>
+	    </div>
+	    <button type="button" class="c1">저녁식사</button>
+	    <div class="content">
+	      <div>카츠오모이에서 돈가스</div>
+	    </div>
+	    <button type="button" class="c1">커낼워크</button>
+	    <div class="content">
+	      <div>커낼워크에서 산책하며 커피 한 잔</div>
+	    </div>
+	    <button type="button" class="c1">달빛축제공원</button>
+	    <div class="content">
+	      <div>공원 산책 + 맥주 축제</div>
+	    </div>
+	    <script>
+	      var coll = document.getElementsByClassName("c1");
+	      var i;
 
+	      for (i = 0; i < coll.length; i++) {
+	        coll[i].addEventListener("click", function() {
+	          var content = this.nextElementSibling;
+	          if (content.style.display === "block") {
+	            content.style.display = "none";
+	          } else {
+	            content.style.display = "block";
+	          }
+	        });
+	      }
+	    </script>
+  	</section>
+  	<hr style="margin-top: 50px;">
+	<div style="font-size: 35px; text-align: center">
+		<여행 코스 B>
+	</div>
+  	<section>
+	    <button type="button" class="c2">점심식사</button>
+	    <div class="content2">
+	      <div>솟구처차기에서 일본식 라면</div>
+	    </div>
+	    <button type="button" class="c2">트리플스트리트</button>
+	    <div class="content2">
+	      <div>A동부터 D동까지 구경</div>
+	    </div>
+	    <button type="button" class="c2">송도 현대프리미엄 아울렛</button>
+	    <div class="content2">
+	      <div>현대프리미엄 아울렛 구경</div>
+	    </div>
+	    <button type="button" class="c2">저녁식사</button>
+	    <div class="content2">
+	      <div>솥고집에서 고기</div>
+	    </div>
+	    <button type="button" class="c2">달빛축제공원</button>
+	    <div class="content2">
+	      <div>공원 산책 + 맥주 축제</div>
+	    </div>
+	    <script>
+	      var coll = document.getElementsByClassName("c2");
+	      var i;
+	      for (i = 0; i < coll.length; i++) {
+	        coll[i].addEventListener("click", function() {
+	          var content = this.nextElementSibling;
+	          if (content.style.display === "block") {
+	            content.style.display = "none";
+	          } else {
+	            content.style.display = "block";
+	          }
+	        });
+	      }
+	    </script>
+  	</section>
+  	<hr style="margin-top: 50px;">
 </body>
 </html>
