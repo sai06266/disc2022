@@ -70,6 +70,14 @@
 		  color: white;
 		  font-size: 20px;
 		}
+		.closebtn {
+		  position: absolute;
+		  top: 10px;
+		  right: 15px;
+		  color: white;
+		  font-size: 35px;
+		  cursor: pointer;
+		}
 	</style>
 </head>
 <body>
@@ -174,6 +182,7 @@
 			  </div>
 			</div>
 			<div class="container">
+			  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
 			  <img id="expandedImg" style="width:100%">
 			  <div id="imgtext"></div>
 			</div>
